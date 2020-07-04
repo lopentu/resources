@@ -45,7 +45,7 @@
       //logo: '_media/icon.svg',
       // 文档标题，显示在侧边栏顶部
       // 仓库地址（设置之后，会在页面右上角渲染一个 GitHub Corner 挂件）
-      repo: 'liao961120/docs-gloss-search',
+      repo: 'lopentu/resources',
       // 页面切换之后，自动跳转到顶部
       auto2top: true,
       // 格式化
@@ -55,12 +55,12 @@
       // https://docsify.js.org/#/zh-cn/plugins
       // 全文搜索 - Search
       search: 'auto',
-      ga: 'UA-170502084-1',
+      //ga: 'UA-170502084-1',
       plugins: [
         // Edit On Github
         function (hook, vm) {
           hook.beforeEach(function (html) {
-            var url = 'https://github.com/lopentu/docs-gloss-search/blob/master/' + vm.route.file
+            var url = 'https://github.com/lopentu/resources/edit/master/' + vm.route.file
             var editHtml = '[:memo: Edit Document](' + url + ')\n\n'
             return editHtml
               + html
@@ -95,7 +95,7 @@
   <script src="js/zoom-image.js"></script>
   <!-- 点击代码块右上角复制代码 -->
   <script src="js/docsify-copy-code.min.js"></script>
-  <script src="js/ga.min.js"></script>
+  <!-- <script src="js/ga.min.js"></script> -->
   <!-- <script src="js/disqus.min.js"></script> -->
   <!-- Plugins：gitalk -->
   <!-- Plugins：代码高亮 prism -->
