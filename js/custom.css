@@ -1,0 +1,84 @@
+img.medium-zoom-image {
+	box-shadow: 2.3px 2.3px 2.3px 1.3px rgba(27, 27, 27, 0.28);
+	border-radius: 4.5px;
+}
+img.center {
+	display: block;
+	margin: 0 auto;
+	padding: 0 auto;
+}
+.last-updated {
+	position: absolute;
+	right: 0;
+	top: 9.1em;
+	font-size: 0.8em;
+	color: rgb(112, 112, 112);
+}
+.last-updated::before {
+	content: "Updated: ";
+	color: rgba(128, 128, 128, 0.715);
+	font-size: 0.75em;
+}
+
+summary {
+	font-size: 0.88em;
+	color: grey;
+}
+summary:hover {
+	cursor: pointer;
+	font-size: 0.92em;
+}
+details[open] summary {
+	color: rgb(0, 214, 0);
+}
+
+
+h2 span {
+	font-size: 1.5rem;
+}
+h3 span {
+	font-size: 1.3rem;
+}
+h4 span {
+	font-size: 1.15rem;
+}
+h5 span {
+	font-size: 1rem;
+}
+h6 span {
+	font-size: 0.9rem;
+}
+
+.markdown-section pre {
+	padding: 0px 1rem;
+}
+.markdown-section pre>code {
+	padding: 0.9em 0px
+}
+
+a > code {
+	font-size: 0.95em !important;
+	font-weight: normal;
+	color: var(--theme-color,#42b983) !important;
+}
+a:hover {
+	text-decoration: none;
+}
+
+/* Auto numbering */
+BODY {
+    counter-reset: chapter;      /* Create a chapter counter scope */
+}
+h2:before {
+	content: counter(chapter);
+	padding-right: 0.4em;
+    counter-increment: chapter;
+}
+h2 {
+	counter-reset: section;
+}
+h3:before {
+	content: counter(chapter) "." counter(section);
+	padding-right: 0.4em;
+	counter-increment: section;
+}
