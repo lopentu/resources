@@ -156,7 +156,7 @@ ASBC 之 Unigram/Bigram 頻率資料
 - [資料讀取](#ptt-bigram-freq-read)：同 PTT Unigram/Bigram
 
 
-## Association Measures
+## Collocation
 
 
 ### ASBC & PTT 2007-12

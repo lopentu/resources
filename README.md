@@ -17,47 +17,31 @@ LOPE Drive 有相當多的語言資源，但由於資料累積多年，時常不
 
 ## 文件編輯
 
-### Supported Code Chunk Highlighting
 
-此文件的 code chunk 支援以下語法的 syntax highlight：
+### Style Guide
 
-|      Language      |       Alias      |
-|:------------------:|:----------------:|
-|       Python       |     `python`     |
-|          R         |        `r`       |
-|        Shell       |      `bash`      |
-|      Markdown      | `markdown`, `md` |
-| Regular Expression |      `regex`     |
+為使說明文件的格式一致，建議可以依照下方的範例作為撰寫的模板 (複製貼上再修改資訊)。下方模板中，需注意的是`Retrieved: 2020-02-26`與`教育部萌典詞條`這兩行的**行末需留兩格空白** (強迫換行)
 
+```md
+### 萌典詞條 <資料名稱>
 
-<details>
-<summary>在文件內，使用下方語法可以為 Code 增加 syntax highlight：</summary>
+Retrieved: 2020-02-26 (資料取得/生成日期)  
+教育部萌典詞條 (資料簡述，一行)  
+[`/LOPERs/廖永賦/moe_dict/moe_lexical_items.json`](https://drive.google.com/file/d/1T_WJcWcaYVPhFWqIdAfup30-bauzxXVa)(2MB)
 
-````md
-##### A chunk of Python code
-
-This is **Markdown** content.
-
-```python
-# This is python code
-name = "Liao"
-print(f"Hello, {name}!")
+- **資料格式**：JSON array
+	```json
+	["⺔", "⼁", "㑳", "㑳憋憋", "㑳擾", "㑿", "㒓", "㓦", "㓦劃", ...]
+	```
+- **資料讀取**
+	```python
+	import json
+	with open("moe_lexical_items.json", encoding="utf-8") as f:
+		words = json.load(f)
+	```
+- **資料來源與處理簡述**  
+	由 [g0v/moedict-data](https://github.com/g0v/moedict-data/blob/master/dict-revised.json) 取得原始字典檔資料 (`dict-revised.json`)，抽取每個項目的詞條 (`title`)
 ```
-````
-
-##### A chunk of Python code
-
-This is **Markdown** content.
-
-```python
-# This is python code
-name = "Liao"
-print(f"Hello, {name}!")
-```
-
----
-</details>
-
 
 ### docsify Tips
 
@@ -105,7 +89,52 @@ print(f"Hello, {name}!")
     ### This one is not {docsify-ignore}
     ```
     </details>
-    
+
+
+### Supported Code Chunk Highlighting
+
+此文件的 code chunk 支援以下語法的 syntax highlight：
+
+|      Language      |       Alias      |
+|:------------------:|:----------------:|
+|       Python       |     `python`     |
+|          R         |        `r`       |
+|        Shell       |      `bash`      |
+|      Markdown      | `markdown`, `md` |
+| Regular Expression |      `regex`     |
+
+
+<details>
+<summary>在文件內，使用下方語法可以為 Code 增加 syntax highlight：</summary>
+
+````md
+##### A chunk of Python code
+
+This is **Markdown** content.
+
+```python
+# This is python code
+name = "Liao"
+print(f"Hello, {name}!")
+```
+````
+
+##### A chunk of Python code
+
+This is **Markdown** content.
+
+```python
+# This is python code
+name = "Liao"
+print(f"Hello, {name}!")
+```
+
+---
+</details>
+
+
+
+
 
 ---
 
