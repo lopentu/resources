@@ -20,32 +20,77 @@ LOPE Drive 有相當多的語言資源，但由於資料累積多年，時常不
 
 ### Style Guide
 
-為使說明文件的格式一致，建議可以依照下方的範例作為撰寫的模板 (複製貼上再修改資訊)。下方模板中，需注意的是`Retrieved: 2020-02-26`與`教育部萌典詞條`這兩行的**行末需留兩格空白** (強迫換行)。
+為使說明文件的格式一致，建議可以依照下方的範例作為撰寫的模板 (複製貼上再修改資訊)。說明文件上的章節編號為**自動產生**，撰寫標題時**無需加入編號**。
 
 <details>
-<summary>撰寫模板</summary>
+<summary>撰寫模板 (以一份資料為例)</summary>
 
-```md
+````md
 ### 萌典詞條 <資料名稱>
 
-Retrieved: 2020-02-26 (資料取得/生成日期)  
-教育部萌典詞條 (資料簡述，一行)  
-[`/LOPERs/廖永賦/moe_dict/moe_lexical_items.json`](https://drive.google.com/file/d/1T_WJcWcaYVPhFWqIdAfup30-bauzxXVa)(2MB)
+- Retrieved: 2020-02-26
+- 教育部萌典詞條
+- [`/LOPERs/廖永賦/moe_dict/moe_lexical_items.json`](https://drive.google.com/file/d/1T_WJcWcaYVPhFWqIdAfup30-bauzxXVa)(2MB)
 
-- **資料格式**：JSON array
-	```json
-	["⺔", "⼁", "㑳", "㑳憋憋", "㑳擾", "㑿", "㒓", "㓦", "㓦劃", ...]
-	```
-- **資料讀取**
-	```python
-	import json
-	with open("moe_lexical_items.json", encoding="utf-8") as f:
-		words = json.load(f)
-	```
-- **資料來源與處理簡述**  
-	由 [g0v/moedict-data](https://github.com/g0v/moedict-data/blob/master/dict-revised.json) 取得原始字典檔資料 (`dict-revised.json`)，抽取每個項目的詞條 (`title`)
+#### 資料格式
+
+JSON array:
+
+```json
+["⺔", "⼁", "㑳", "㑳憋憋", "㑳擾", "㑿", "㒓", "㓦", "㓦劃", ...]
+```
+
+#### 資料讀取
+
+```python
+import json
+with open("moe_lexical_items.json", encoding="utf-8") as f:
+	words = json.load(f)
+```
+
+#### 資料來源與處理簡述
+
+由 [g0v/moedict-data](https://github.com/g0v/moedict-data/blob/master/dict-revised.json) 取得原始字典檔資料 (`dict-revised.json`)，抽取每個項目的詞條 (`title`)
+````
+
+</details>
+
+
+### 建立新文件
+
+若想新增的內容無法被歸類於當前 sidebar 內的分類，可以在此 repo 的**根目錄**自行建立一份新的章節 (見下_Repo 檔案結構_)，並將此檔案連結新增至 `_sidebar.md`。
+
+<details>
+<summary>Repo 檔案結構</summary>
+
+```bash
+lopentu/resources
+  ├── README.md           # 首頁 (url: /#/)
+  ├── lexical-items.md    # 詞彙 (url: /#/lexical-items)
+  ├── corpus.md           # 語料 (url: /#/corpus)
+  ├── corpus-stats.md     # 語料衍生資料 (url: /#/corpus-stats)
+  ├── scripts.md          # 常用程式 (url: /#/scripts)
+  ├── _sidebar.md         # 頁面連結設定
+  |                       # ==== 此線以下的檔案無需理會 ==== #
+  ├── _navbar.md
+  ├── index.html
+  ├── js/
+  └── _media/
 ```
 </details>
+
+
+例如，可以在根目錄新增 `server.md`，再至 `_sidebar.md` 新增 `* [伺服器資源](server.md)`：
+
+```md
+<!-- docs/_sidebar.md -->
+
+- [詞彙](lexical-items.md)
+- [語料](corpus.md)
+- [語料衍生資料](corpus-stats.md)
+- [常用程式](scripts.md)
+- [伺服器資源](server.md)
+```
 
 
 ### docsify Tips
@@ -102,15 +147,17 @@ Retrieved: 2020-02-26 (資料取得/生成日期)
 
 |      Language      |       Alias      |
 |:------------------:|:----------------:|
+|     JavaScript     | `javascript` `js`|
 |       Python       |     `python`     |
-|          R         |        `r`       |
 |        Shell       |      `bash`      |
-|      Markdown      | `markdown`, `md` |
+|          R         |        `r`       |
+|      Markdown      | `markdown` `md`  |
 | Regular Expression |      `regex`     |
 
 
+
 <details>
-<summary>Code chunk syntax highlight</summary>
+<summary>Code chunk syntax highlight example</summary>
 
 ````md
 ##### A chunk of Python code

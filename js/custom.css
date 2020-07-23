@@ -82,6 +82,18 @@ h3:before {
 	padding-right: 0.4em;
 	counter-increment: section;
 }
+h3 {
+	counter-reset: sub-section;
+}
+h4:before {
+	content: counter(chapter) "." counter(section) "." counter(sub-section);
+	padding-right: 0.4em;
+	counter-increment: sub-section;
+}
+h2::before, h3::before, h4::before {
+	text-decoration: underline solid inherit 10px;
+}
+
 
 .inline {
 	height: 1.15em;
