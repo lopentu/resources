@@ -180,8 +180,6 @@ This is **Markdown** content.
 name = "Liao"
 print(f"Hello, {name}!")
 ```
-
----
 </details>
 
 
