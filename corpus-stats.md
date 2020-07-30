@@ -1,9 +1,11 @@
-# 語料衍生資料
+語料衍生資料
+==============================
 
 {docsify-updated}
 
 
-## Frequency Data
+Frequency Data
+------------------------------
 
 
 ### PTT 2007-12 Unigram/Bigram  :id=ptt-bigram-freq
@@ -175,7 +177,9 @@ ASBC 之 Unigram/Bigram 頻率資料
 
 
 
-## Collocation
+Collocation
+------------------------------
+
 
 ### ASBC & PTT 2007-12
 
