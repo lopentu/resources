@@ -48,11 +48,49 @@ with open("asbc_lite.jsonl", encoding="utf-8") as f:
 ```
 
 
+### PTT 語料 (小規模)
+
+- Retrieved: 2020-04-09
+- 自 12 個板 (見下) 隨機抽取的 36000 篇 PTT 文章
+- [`/LOPERs/廖永賦/PTT/sampled_PTTposts.zip`](https://drive.google.com/file/d/1iCkEOdIL02yAiY1DVOHj5fLHqaOoODzI)(97MB)
+
+
+#### 資料格式
+
+每篇文章為 `.vrt` 檔 (斷詞後之 PTT 語料格式)。`.vrt` 檔基本上是 XML 格式，可使用 `BeautifulSoup` 或其它處理 XML 的套件處理。
+
+
+#### 資料讀取
+
+```python
+from bs4 import BeautifulSoup
+
+with open('./Gossiping/M.1127637958.A.E2E.vrt') as f:
+	vrt = f.read()
+
+# Parse XML
+soup = BeautifulSoup(vrt, 'lxml')
+
+# Get elements
+post = soup.find('post')
+title = post.find(type='title')
+content = post.find(type='body')
+comments = post.find_all(type="comment")
+```
+
+
+#### 資料來源與處理簡述
+
+原始資料為 Don 於 2020-04-09 爬取的 12 板 (`BabyMother`, `Boy-Girl`, `gay`, `Gossiping`, `Hate`, `HatePolitics`, `Horror`, `JapanMovie`, `joke`,`LGBT_SEX`, `NTU`, `sex`) 資料，經 PTT 語料庫的處理管線斷詞與 PoS tag。由於資料不小，先將各版的 `.vrt` (原本只有 12 個 `.vrt` 檔，一板一個) 分割成一篇文章一個 `.vrt` 檔。分割之後，再由各板隨機抽取 3000 篇文章，形成 36000 篇文章的小語料。
+
+
+
+
 ### Dcard
 
 - Retrieved: 2020-02-04
 - Dcard 貼文語料
-- [liao961120/dcard-corpus/data/dcard.jsonl](https://github.com/liao961120/dcard-corpus/tree/master/data/dcard.jsonl)
+- [liao961120/dcard-corpus/data/dcard.jsonl](https://github.com/liao961120/dcard-corpus/tree/master/data/dcard.jsonl) (94MB)
 
 
 #### 資料格式
