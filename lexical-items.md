@@ -153,11 +153,11 @@ from gensim.models.wrappers import FastText
 model = FastText.load_fasttext_format('/home/yongfu/fasttext-cc.zh.300.bin')
 
 # 測試訓練資料中是否有該詞彙
->>> "語言所" in model.wv.vocab
+"語言所" in model.wv.vocab
 #> True
 
 # 測試能否取得某詞彙之詞向量 (i.e. 訓練資料含有該詞彙 或 可透過 subword info 計算出來)
->>> "語言所" in model
+"語言所" in model
 #> True
 
 # 取得詞向量
