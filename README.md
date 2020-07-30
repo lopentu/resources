@@ -82,7 +82,7 @@ lopentu/resources
 </details>
 
 
-例如，可以在根目錄新增 `server.md`，再至 `_sidebar.md` 新增 `* [伺服器資源](server.md)`：
+例如，可以在根目錄新增 `server.md`，再至 `_sidebar.md` 新增 `- [伺服器資源](server.md)`：
 
 ```md
 <!-- docs/_sidebar.md -->
