@@ -220,7 +220,3 @@ df = pd.read_csv('ASBC_PTT2007-2012_seed_collocates.tsv', sep="\t")
 Association measures 由 [ASBC](#asbc-bigram-freq)/[PTT2007-12](#ptt-bigram-freq) Bigram 頻率計算而得。`seg_error` 是根據 `w1` + `w2` 是否出現在[萌典詞條](/lexical-items#萌典詞條)或[中文維基頁面標題](/lexical-items#中文維基標題)。
 
 - 連結: [資料處理程式碼](https://github.com/lopentu/PTT_collocates)、[Model Report](https://lopentu.github.io/PTT_collocates/20200703)
-
-
-
-$$$\Delta P_{1|2}$$$
