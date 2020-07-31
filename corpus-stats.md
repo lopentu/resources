@@ -202,8 +202,8 @@ ASBC 與 PTT 之_特定單字詞_ (CLD 與 DeepLex 交集) bigram association me
 - Association Measures:
     - Symmetric measures: `MI`, `MI3`, `MI_logf`, `t`, `Dice`, `logDice` (based on [Statistics used in Sketch Engine](https://www.sketchengine.eu/wp-content/uploads/ske-statistics.pdf))
     - Asymmetric measures ([Gries, 2013](http://www.stgries.info/research/2013_STG_DeltaP&H_IJCL.pdf)): 
-        - $\Delta P_{2|1}$ = $P(word_2|word_1) - P(word_2|not~word_1)$
-        - $\Delta P_{1|2}$ = $P(word_1|word_2) - P(word_1|not~word_2)$
+        * $$\Delta P_{2|1} = P(word_2|word_1) - P(word_2|not~word_1)$$
+        * $$\Delta P_{1|2} = P(word_1|word_2) - P(word_1|not~word_2)$$
 
 
 #### 資料讀取
@@ -220,3 +220,7 @@ df = pd.read_csv('ASBC_PTT2007-2012_seed_collocates.tsv', sep="\t")
 Association measures 由 [ASBC](#asbc-bigram-freq)/[PTT2007-12](#ptt-bigram-freq) Bigram 頻率計算而得。`seg_error` 是根據 `w1` + `w2` 是否出現在[萌典詞條](/lexical-items#萌典詞條)或[中文維基頁面標題](/lexical-items#中文維基標題)。
 
 - 連結: [資料處理程式碼](https://github.com/lopentu/PTT_collocates)、[Model Report](https://lopentu.github.io/PTT_collocates/20200703)
+
+
+
+$$$\Delta P_{1|2}$$$

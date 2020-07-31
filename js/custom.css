@@ -77,6 +77,17 @@ h2:before {
 h2 {
 	counter-reset: section;
 }
+h2 span, h2:before {
+	color: #34495e94 !important;
+	font-weight: normal;
+}
+h2:after {
+    content:"";
+    display: block;
+    height: 0;
+    width: 100%;
+    border-top: 1px solid #34495e38;
+}
 h3:before {
 	content: counter(chapter) "." counter(section);
 	padding-right: 0.4em;
@@ -84,6 +95,11 @@ h3:before {
 }
 h3 {
 	counter-reset: sub-section;
+}
+h3:after {
+	content: "📖";
+	font-size: 0.85em;
+	padding-left: 0.25em;
 }
 h4:before {
 	content: counter(chapter) "." counter(section) "." counter(sub-section);
