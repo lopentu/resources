@@ -28,7 +28,7 @@ Frequency Data
 }
 ```
 
-##### *_bigrams_trie.jsonl`
+##### *_bigrams_trie.jsonl
 
 每行是一個 2-element JSON Array `[ <Word1>, <Word2> ]`，`<Word1>` 是 `str`，`<Word2>` 是 `dict`：
 
