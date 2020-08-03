@@ -221,7 +221,7 @@ with open("dcard.jsonl", encoding="utf-8") as f:
 
 原始資料
 -------------------
-### Me <資料名稱>
+### Metoo
 
 - Retrieved: 2017-11-29
 -The corpus adopted here is collected by Brett Turner from November 29th to December 25th, 2017.
