@@ -133,3 +133,40 @@ with open("dcard.jsonl", encoding="utf-8") as f:
 #### 資料來源與處理簡述
 
 由 Dcard API 爬下之貼文 (19,224 篇)，經 [ckiplab/ckiptagger](https://github.com/ckiplab/ckiptagger) 斷詞及 PoS tag，詳見 [`liao961120/dcard-corpus`](https://github.com/liao961120/dcard-corpus)
+
+
+原始資料
+-------------------
+### Me <資料名稱>
+
+- Retrieved: 2017-11-29
+-The corpus adopted here is collected by Brett Turner from November 29th to December 25th, 2017.
+- (https://drive.google.com/drive/folders/1UIbpE21VPqREHnyjM05W5j1mRUtZ80Mz?usp=sharing)(117MB)
+
+#### 資料格式
+
+CSV:
+
+```CSV
+|   | text                                                                                                                                            | favorited | favoriteCount | replyToSN     | created        | truncated | replyToSID | id       | replyToUID | statusSource                                                                           | screenName     | retweetCount | isRetweet | retweeted | longitude | latitude |   |
+|---|-------------------------------------------------------------------------------------------------------------------------------------------------|-----------|---------------|---------------|----------------|-----------|------------|----------|------------|----------------------------------------------------------------------------------------|----------------|--------------|-----------|-----------|-----------|----------|---|
+| 1 | American Harem.. #MeToo https://t.co/HjExLJdGuF                                                                                                 | FALSE     | 0             | NA            | 11/29/17 23:59 | FALSE     | NA         | 9.36E+17 | NA         | <a href="http://instagram.com"   rel="nofollow">Instagram</a>                          | ahmediaTV      | 0            | FALSE     | FALSE     | NA        | NA       |   |
+| 2 | @johnconyersjr  @alfranken  why have you guys not resigned yet? Liberal   hypocrisy! #MeToo                                                     | FALSE     | 0             | johnconyersjr | 11/29/17 23:59 | FALSE     | NA         | 9.36E+17 | 2.66E+08   | <a href="http://twitter.com"   rel="nofollow">Twitter Web Client</a>                   | JesusPrepper74 | 0            | FALSE     | FALSE     | NA        | NA       |   |
+| 3 | Watched Megan Kelly ask Joe Keery this A.M. if she can "rub my   fingers through your hair", and refer to his body be   https://t.co/Q86wfW7DeJ | FALSE     | 0             | NA            | 11/29/17 23:59 | TRUE      | NA         | 9.36E+17 | NA         | <a href="http://twitter.com/download/android"   rel="nofollow">Twitter for Android</a> | DemerisePotvin | 0            | FALSE     | FALSE     | NA        | NA       |   |
+```
+
+#### 資料讀取
+
+```python
+import pandas as pd  
+import numpy as np
+
+!pip install matplotlib
+cols = ['number','text','favorited','favoriteCount','replyToSN','created','truncated','replyToSID','id','replyToUID','statusSource','screenName','retweetCount','isRetweet','retweeted','longitude','latitude']
+df = pd.read_csv("metoo_tweets_dec2017.csv",header=None, names=cols,encoding = 'unicode_escape')
+
+```
+
+#### 資料來源與處理簡述
+
+Metoo movement tweets collected by Brett Turner from November 29th to December 25th, 2017.
