@@ -7,6 +7,60 @@
 未斷詞
 ------------------------------
 
+### 同婚論述語料
+
+- Retrieved: 2020-02-26
+- 此語料為抓取同性婚姻正方[多元成家大補帖](http://lgbtfamiliesinfo.tw/)以及同性婚姻反方[下一代幸福聯盟](https://taiwanfamily.com/)兩個網站上每篇文章的語料。
+- 多元成家大補帖語料連結：[`/LOPERs/洪漢唐/同婚論述語料/anti_all_articles.json`](https://drive.google.com/file/d/11w1i2iEgvlfZIYT5ohCue5QYa-jqHtuV)(2MB)
+- 下一代幸福聯盟語料連結：[`/LOPERs/洪漢唐/同婚論述語料/pro_all_articles.json`](https://drive.google.com/file/d/1hH353p1HTgEEZ3O8xB8ExJG2tWngSx06)(2MB)
+
+#### 資料格式
+
+##### 反同方：下一代幸福聯盟
+
+JSON array of posts:
+
+```json
+[
+    {
+    	"title": 標題,
+    	"time": Po文時間,
+    	"content": 內文,
+    	"post_id": 文章ID
+    },
+    ...
+]
+```
+
+##### 挺同方：多元成家大補帖
+
+JSON array of posts:
+
+```json
+[
+    {
+    	"title": 標題,
+    	"time": Po文時間,
+    	"content": 內文,
+    	"post_url": Po文網址
+    },
+    ...
+]
+```
+
+#### 資料讀取
+
+```python
+import json
+with open("anti_all_articles.json", encoding="utf-8") as f:
+	anti_articles = json.load(f)
+```
+
+#### 資料來源與處理簡述
+
+此兩個網站皆為類似部落格的形式，以一篇篇文章發佈。
+
+若需自行抓取最新的資料，請參考抓取資料的程式碼(.ipynb)：[`/LOPERs/洪漢唐/同婚論述語料/anti_and_pro_lgbt_crawler.ipynb`](https://drive.google.com/file/d/1dQMV3Z0TT-j9gTi35_DNvUtjlY15qx28/view?usp=sharing)
 
 已斷詞
 ------------------------------
