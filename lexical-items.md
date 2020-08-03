@@ -182,3 +182,7 @@ model.most_similar("語言所", topn=3)
 #### 資料來源與處理簡述
 
 由 [FastText](https://fasttext.cc) 釋出的詞向量資料。這邊未進行處理，僅下載到 LOPE 132 server 方便大家使用。
+
+
+### Diachronic word sense embeddings
+
