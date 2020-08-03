@@ -6,6 +6,32 @@
 
 未斷詞
 ------------------------------
+### 膩結尾問句
+
+- Retrieved: 2020-01-08
+- PTT
+- [`/yulin/ni_clean.csv`](https://docs.google.com/spreadsheets/d/1CNeF5teGTyzWW8nL-xvYYF4mPHNaAzKotByQNVWZg2I/edit?usp=sharing)
+
+#### 資料格式
+
+CSV file:
+
+```csv
+2019-11-01, Baseball, 打少棒膩？
+2020-01-01, Gossiping, 你當我被騙大的膩？ 
+...
+```
+
+#### 資料讀取
+
+```R
+sent <- read.csv("ni_clean.csv")
+```
+
+#### 資料來源與處理簡述
+
+使用 PTT Corpus 的 API 取得 [PTT](https://www.ptt.cc/bbs/hotboards.html) 爬取前20大討論板中以膩為結尾的問句
+
 
 
 已斷詞
