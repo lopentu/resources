@@ -4,16 +4,17 @@
 
 {docsify-updated}
 
+類別標題一 (我還沒想好，交給你想)
+------------------------------
+
 ### causation 標記
-
-
 
 #### 資料格式
 
+[causation *shi*/*rang* 標記資料](https://drive.google.com/drive/folders/1GAaYenEr8JWe43HDg_iLL2Z8X2tZpXnw)
 csv:
 
 ```csv
-https://drive.google.com/drive/folders/1GAaYenEr8JWe43HDg_iLL2Z8X2tZpXnw
 
 | ResuPred | Property   | Transitivity | Varieties |
 |----------|------------|--------------|-----------|
@@ -23,9 +24,3 @@ https://drive.google.com/drive/folders/1GAaYenEr8JWe43HDg_iLL2Z8X2tZpXnw
 | shi      | inducive   | TR           | CHS       |
 | shi      | affective  | INTR         | CHS       |
 ```
-
-
-
-
-請取類別標題
-------------------------------
