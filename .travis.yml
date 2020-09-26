@@ -19,7 +19,6 @@ before_script:
 
 # command to run tests
 script:
-  #- openssl enc -d -aes-256-cbc -in lope-drive-token.json.enc -out lope-drive-token.json -k $lopedrivetoken
   - unzip -P $drivetoken lope-drive-token.json.zip
   - python3 main.py
 
