@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>實驗室資源 | LOPE</title>
+  <!-- 网站icon -->
+  <link rel="icon" href="_media/favicon.ico">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="LOPE 實驗室資源說明文件">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- Theme 主题设置 [vue.css] [buble.css] [dark.css] [pure.css] -->
+  <link rel="stylesheet" href="js/vue.css">
+  <link rel="stylesheet" href="js/custom.css">
+  <!-- Plugin gitalk -->
+</head>
+<body>
+  <!-- loading显示的文字 -->
+  <div id="app">Loading...</div>
+  <script>
+    window.$docsify = {
+      // ************************* Configuration *************************
+      // https://docsify.js.org/#/zh-cn/configuration
+      // --> 首页 「README.md」
+      // homepage: 'https://raw.githubusercontent.com/ripperhe/docsify-template/master/README.md',
+      // -->封面 「_coverpage.md」
+      coverpage: false,
+      // -->侧边栏 [_sidebar.md]
+      loadSidebar:true,
+      // 说实话，没搞懂
+      //maxLevel: 6,
+      // 设置侧边栏中，当前文章的最大目录层级；不设置，则不会显示当前文章目录
+      subMaxLevel: 3,
+      // -->导航栏 [_navbar.md]
+      loadNavbar: true,
+      mergeNavbar: true,
+      //disqus: 'docs-gloss-search',
+      // -->404页面 「_404.md」
+      //notFoundPage: true,
+      markdown: {
+        smartypants: true,
+      },
+
+      name: '<span style="font-size:1.1em;color:#5c5c5c;letter-spacing:0.1em;">實驗室資源</span><br><span style="font-size:0.51em;color:grey;letter-spacing:0.35em">使用說明 | LOPE</span>',
+      // 网址logo
+      //logo: '_media/icon.svg',
+      // 文档标题，显示在侧边栏顶部
+      // 仓库地址（设置之后，会在页面右上角渲染一个 GitHub Corner 挂件）
+      repo: 'lopentu/resources',
+      // 页面切换之后，自动跳转到顶部
+      auto2top: true,
+      // 格式化
+      formatUpdated: '<span class="last-updated">2020.{MM}.{DD}</span>',
+
+      // ************************* Plugins *************************
+      // https://docsify.js.org/#/zh-cn/plugins
+      // 全文搜索 - Search
+      search: 'auto',
+      //ga: 'UA-170502084-1',
+      plugins: [
+        // Edit On Github
+        function (hook, vm) {
+          hook.beforeEach(function (html) {
+            var url = 'https://github.com/lopentu/resources/edit/master/' + vm.route.file
+            var editHtml = '[:memo: Edit Document](' + url + ')\n\n'
+            return editHtml
+              + html
+              + '\n\n----\n\n'
+              // + '<a href="https://docsify.js.org" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;">Powered by docsify</a>'
+          })
+        },
+
+        // Footer
+        function(hook) {
+          var footer = [
+            '<footer style="text-align:center;">',
+            '<span>LOPE Resource Docs</span>',
+            '<span style="color:rgba(163, 163, 163, 0.7);margin: 0 0.5em;font-weight:bold;"> &#448; </span> ',
+            '<span>&copy; <a href="https://lope.linguistics.ntu.edu.tw" target="_blank">LOPE</a> 2020 </span>',
+            
+            '</footer>'
+          ].join('');
+
+          hook.afterEach(function(html) {
+            return html + footer;
+          });
+        }
+      ]
+    }
+  </script>
+  <script src="js/docsify.min.js"></script>
+  <!-- ************************* Plugins ************************* -->
+  <!-- Plugins：全文搜索 -->
+  <script src="js/search.js"></script>
+  <!-- Plugins：图片缩放 - Zoom image -->
+  <script src="js/zoom-image.js"></script>
+  <!-- 点击代码块右上角复制代码 -->
+  <script src="js/docsify-copy-code.min.js"></script>
+  <!-- <script src="js/ga.min.js"></script> -->
+  <!-- <script src="js/disqus.min.js"></script> -->
+  <!-- Plugins：gitalk -->
+  <!-- Plugins：代码高亮 prism -->
+  <!-- CDN files for docsify-katex -->
+
+  <!-- CDN files for docsify-katex -->
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script> -->
+  <!-- or <script src="//cdn.jsdelivr.net/gh/upupming/docsify-katex@latest/dist/docsify-katex.js"></script> -->
+  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"/> -->
+
+  <script src="js/prism/prism-python.min.js"></script>
+  <script src="js/prism/prism-r.min.js"></script>
+  <script src="js/prism/prism-markdown.min.js"></script>
+  <script src="js/prism/prism-json.min.js"></script>
+  <script src="js/prism/prism-regex.min.js"></script>
+  <!-- 
+  <script src="//unpkg.com/prismjs/components/prism-java.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-python.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-php.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-vim.min.js"></script> -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+  <script>
+      document.addEventListener("scroll", function() {
+          renderMathInElement(document.body, {
+              delimiters: [
+                {left: "$$$", right: "$$$", display: true},
+                {left: "$$", right: "$$", display: false},
+              ]
+          });
+      });
+  </script>
+
+
+</body>
+</html>

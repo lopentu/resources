@@ -1,3 +1,22 @@
+.drive-location {
+	float: right;
+	clear: both;
+	text-decoration: none !important;
+}
+.drive-location * {
+	color: grey !important;
+	background: rgba(255, 192, 203, 0.5) !important;
+}
+.drive-location:hover * {
+	color: black !important;
+}
+.drive-location::before {
+	display: block;
+	content: "";
+	height: 2em;
+	/* margin: 1em;	 */
+}
+
 img.medium-zoom-image {
 	box-shadow: 2.3px 2.3px 2.3px 1.3px rgba(27, 27, 27, 0.28);
 	border-radius: 4.5px;
