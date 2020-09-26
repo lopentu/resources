@@ -16,7 +16,7 @@
 ### Description
 ```
 
-此份文件每兩週會自動更新一次，屆時新增於 LOPE Drive 上的 `LOPE_INDEX.md` 即會更新於此。
+此份文件每週自動更新一次，屆時新增於 LOPE Drive 上的 `LOPE_INDEX.md` 即會更新於此。
 
 
 
