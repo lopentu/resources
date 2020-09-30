@@ -4,3 +4,6 @@
 *~
 .DS_Store
 lope-drive-token.json
+__pycache__
+docs/*.md
+!docs/README.md

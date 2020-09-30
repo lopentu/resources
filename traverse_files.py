@@ -4,6 +4,7 @@ class Drive():
     def __init__(self, service):
         self.service = service
         self.folders = {}  # {id: {id, name, parents} }
+        self.file_content = {}  # {id: content}
 
 
     # Get LOPE_INDEX.md
@@ -50,6 +51,16 @@ class Drive():
     
 
     def get_file_content(self, file_id):
-        file_content = self.service.files().get_media(
-            fileId=file_id).execute().decode('UTF-8')
-        return file_content
+        if file_id not in self.file_content:
+            self.file_content[file_id] = self.service.files().get_media(
+                fileId=file_id).execute().decode('UTF-8')
+        
+        return self.file_content[file_id]
+
+
+    def get_file_content_by_folderid(self, folder_id):
+        for fid, fmeta in self.folders.items():
+            if ('parents' in fmeta) and (fmeta['parents'][0] == folder_id):
+                return self.get_file_content(fid)
+        
+        return None
