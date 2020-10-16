@@ -46,7 +46,7 @@ def main():
     sidebar = []
     for doc_class, doc in docs_classified.items():
         # write doc content
-        fname = f"{doc_class.replace('/', '_').strip('_')}.md"
+        fname = f"{doc_class.replace('/', '_').replace(' ', '_').strip('_')}.md"
         doc = '\n'.join(doc)
         with open(f"{MD_FOLDER}/{fname}", 'w', encoding='utf-8') as f:
             f.write(doc)
@@ -99,7 +99,7 @@ def get_file_rel_path(fid, drive):
     full_path = drive.get_full_path(fid)
     if full_path:
         full_path_str = '/' + '/'.join(x for x, y in full_path[1:-1])
-        fname = full_path_str.replace('/', '_').strip('_') + '.md'
+        fname = full_path_str.replace('/', '_').replace(' ', '_').strip('_') + '.md'
         return fname, full_path_str
     return None, None
 
@@ -108,7 +108,7 @@ def get_folder_rel_path(folder_id, drive):
     full_path = drive.get_full_path(folder_id)
     if full_path:
         full_path_str = '/' + '/'.join(x for x, y in full_path[1:])
-        fname = full_path_str.replace('/', '_').strip('_') + '.md'
+        fname = full_path_str.replace('/', '_').replace(' ', '_').strip('_') + '.md'
         return fname, full_path_str
     return None, None
 
