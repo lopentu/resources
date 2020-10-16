@@ -3,7 +3,7 @@
 關於
 ==========================
 
-此份說明文件記錄著 [LOPE Drive](https://drive.google.com/drive/folders/0AJ9ALSFcTcxMUk9PVA) 上的資源，方便實驗室成員使用。
+此說明文件記錄 [LOPE Drive](https://drive.google.com/drive/folders/0AJ9ALSFcTcxMUk9PVA) 上的資源，方便實驗室成員使用。
 
 
 ## 撰寫說明文件
