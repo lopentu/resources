@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/lopentu/resources.svg?branch=master)](https://travis-ci.org/lopentu/resources)
+
 關於
 ==========================
 
