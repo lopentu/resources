@@ -1,0 +1,18 @@
+<!-- docs/_sidebar.md -->
+
+- [/G1.Language.Resources/ASBC](G1.Language.Resources_ASBC.md)
+- [/G1.Language.Resources/CWN/cwn-2021](G1.Language.Resources_CWN_cwn-2021.md)
+- [/G1.Language.Resources/DeepLEX/2020](G1.Language.Resources_DeepLEX_2020.md)
+- [/G1.Language.Resources/PTT](G1.Language.Resources_PTT.md)
+- [/G1.Language.Resources/字典.lexicon](G1.Language.Resources_字典.lexicon.md)
+- [/G1.Language.Resources/漢語歷時語料庫](G1.Language.Resources_漢語歷時語料庫.md)
+- [/G1.Language.Resources/維基百科](G1.Language.Resources_維基百科.md)
+- [/G2.NLP.NLU](G2.NLP.NLU.md)
+- [/LOPERs/Alumni/陳蓓怡](LOPERs_Alumni_陳蓓怡.md)
+- [/LOPERs/廖永賦](LOPERs_廖永賦.md)
+- [/實驗室資源管理與工具](實驗室資源管理與工具.md)
+- [/實驗室資源管理與工具/corpora](實驗室資源管理與工具_corpora.md)
+- [/實驗室資源管理與工具/embeddings](實驗室資源管理與工具_embeddings.md)
+- [/實驗室資源管理與工具/lexicon.ontologies](實驗室資源管理與工具_lexicon.ontologies.md)
+- [/實驗室資源管理與工具/nlp.scripts/Chinese.nlp.pipeline](實驗室資源管理與工具_nlp.scripts_Chinese.nlp.pipeline.md)
+- [/研究出版/projects](研究出版_projects.md)
