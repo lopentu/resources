@@ -20,7 +20,11 @@
 ### Description
 ```
 
-此份文件每週自動更新一次，屆時新增於 LOPE Drive 上的 `LOPE_INDEX.md` 即會更新於此。
+此份文件<s>每週自動更新一次</s>，屆時新增於 LOPE Drive 上的 `LOPE_INDEX.md` 即會更新於此。
+
+欲更新此文件，請至 [GitHub Action](https://github.com/lopentu/resources/actions) 頁面選取**最新 (最上方)** 的 workflow，點擊進入後應類似下圖。請點選畫面右上角的 **Re-run all jobs**：
+
+![](https://img.yongfu.name/lope-resources-action.png)
 
 
 
