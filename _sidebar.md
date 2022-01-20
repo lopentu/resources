@@ -10,6 +10,7 @@
 - [/G2.NLP.NLU](G2.NLP.NLU.md)
 - [/LOPERs/Alumni/陳蓓怡](LOPERs_Alumni_陳蓓怡.md)
 - [/LOPERs/廖永賦](LOPERs_廖永賦.md)
+- [/LOPERs/石晴方](LOPERs_石晴方.md)
 - [/國際合作/CCKF 2021-23](國際合作_CCKF_2021-23.md)
 - [/實驗室資源管理與工具](實驗室資源管理與工具.md)
 - [/實驗室資源管理與工具/corpora](實驗室資源管理與工具_corpora.md)
