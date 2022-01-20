@@ -13,7 +13,7 @@
 
 #### 資料格式
 
-- `movie_reviews_top10.csv`
+- [`movie_reviews_top10.csv`](https://drive.google.com/file/d/1gTfMZf9X7YadDQ9U5fCgCk6SoN-3DBq2/view?usp=sharing)
 
     | 欄位名稱 | 描述 |
     |-------------|-------------|

@@ -2,6 +2,7 @@
 
 - [/G1.Language.Resources/ASBC](G1.Language.Resources_ASBC.md)
 - [/G1.Language.Resources/CWN/cwn-2021-working.group](G1.Language.Resources_CWN_cwn-2021-working.group.md)
+- [/G1.Language.Resources/CWN/cwn-2021-working.group/sentiment_verbs/data](G1.Language.Resources_CWN_cwn-2021-working.group_sentiment_verbs_data.md)
 - [/G1.Language.Resources/DeepLEX/2020](G1.Language.Resources_DeepLEX_2020.md)
 - [/G1.Language.Resources/PTT](G1.Language.Resources_PTT.md)
 - [/G1.Language.Resources/字典.lexicon](G1.Language.Resources_字典.lexicon.md)
